@@ -5,9 +5,11 @@ function getComputerChoice() {
 }
 
 function playRound(userInputChoice, computerChoice) {
+  console.log(userInputChoice.toLowerCase());
+  console.log(computerChoice);
   if (
-    userInputChoice.toLowerCase() != "rock" ||
-    userInputChoice.toLowerCase() != "paper" ||
+    userInputChoice.toLowerCase() != "rock" &&
+    userInputChoice.toLowerCase() != "paper" &&
     userInputChoice.toLowerCase() != "scissors"
   ) {
     return "Invalid Choice!";
