@@ -37,7 +37,29 @@ function playRound(userInputChoice, computerChoice) {
   }
 }
 
-userSelection = prompt("Select Rock, Paper or Scissors");
-computerSelection = getComputerChoice();
-result = playRound(userSelection, computerSelection);
-console.log(result);
+function playGame() {
+  let userWinCounter = 0;
+  let compWinCounter = 0;
+  for (let i = 0; i <= 4; i++) {
+    userSelection = prompt("Select Rock, Paper or Scissors");
+    computerSelection = getComputerChoice();
+    result = playRound(userSelection, computerSelection);
+    console.log(result);
+    if (result.includes("You win")) {
+      userWinCounter++;
+    } else if (result.includes("You lose")) {
+      compWinCounter++;
+    }
+  }
+
+  if (userWinCounter > compWinCounter) {
+    return "You Win";
+  } else if (userWinCounter < compWinCounter) {
+    return "GAME OVER. Try Again";
+  } else {
+    return "Close One. It was a draw";
+  }
+}
+
+finalResult = playGame();
+console.log(finalResult);
