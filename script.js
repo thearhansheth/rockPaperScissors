@@ -64,11 +64,12 @@ if (scissorsBtn) {
 }
 
 //functions
-
 function buttonClicked(playerSelection) {
   console.log(`Player selected ${playerSelection}`);
   computerSelection = getComputerChoice();
+  playRound(playerSelection, computerSelection);
 }
+
 function getComputerChoice() {
   let choice = ["rock", "paper", "scissors"];
   let selectedChoice = Math.floor(Math.random() * choice.length);
