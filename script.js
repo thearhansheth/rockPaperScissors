@@ -1,11 +1,13 @@
 //UI Elements
-rock = document.getElementById("Rockbtn");
-paper = document.getElementById("Paperbtn");
-scissor = document.getElementById("Scissorbtn");
+rockBtn = document.getElementById("Rockbtn");
+paperBtn = document.getElementById("Paperbtn");
+scissorsBtn = document.getElementById("Scissorsbtn");
 
-rock.addEventListener("click", () => playRound("rock", getComputerChoice()));
-paper.addEventListener("click", () => playRound("paper", getComputerChoice()));
-scissor.addEventListener("click", () =>
+rockBtn.addEventListener("click", () => playRound("rock", getComputerChoice()));
+paperBtn.addEventListener("click", () =>
+  playRound("paper", getComputerChoice())
+);
+scissorsBtn.addEventListener("click", () =>
   playRound("scissors", getComputerChoice())
 );
 
