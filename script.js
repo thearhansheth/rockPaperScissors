@@ -6,7 +6,7 @@ scissor = document.getElementById("Scissorbtn");
 rock.addEventListener("click", () => playRound("rock", getComputerChoice()));
 paper.addEventListener("click", () => playRound("paper", getComputerChoice()));
 scissor.addEventListener("click", () =>
-  playRound("scissor", getComputerChoice())
+  playRound("scissors", getComputerChoice())
 );
 
 function getComputerChoice() {
