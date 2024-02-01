@@ -1,3 +1,14 @@
+//UI Elements
+rock = document.getElementById("Rockbtn");
+paper = document.getElementById("Paperbtn");
+scissor = document.getElementById("Scissorbtn");
+
+rock.addEventListener("click", () => playRound("rock", getComputerChoice()));
+paper.addEventListener("click", () => playRound("paper", getComputerChoice()));
+scissor.addEventListener("click", () =>
+  playRound("scissor", getComputerChoice())
+);
+
 function getComputerChoice() {
   let choice = ["rock", "paper", "scissors"];
   let selectedChoice = Math.floor(Math.random() * choice.length);
@@ -37,29 +48,29 @@ function playRound(userInputChoice, computerChoice) {
   }
 }
 
-function playGame() {
-  let userWinCounter = 0;
-  let compWinCounter = 0;
-  for (let i = 0; i <= 4; i++) {
-    userSelection = prompt("Select Rock, Paper or Scissors");
-    computerSelection = getComputerChoice();
-    result = playRound(userSelection, computerSelection);
-    console.log(result);
-    if (result.includes("You win")) {
-      userWinCounter++;
-    } else if (result.includes("You lose")) {
-      compWinCounter++;
-    }
-  }
-
-  if (userWinCounter > compWinCounter) {
-    return "You Win";
-  } else if (userWinCounter < compWinCounter) {
-    return "GAME OVER. Try Again";
-  } else {
-    return "Close One. It was a draw";
-  }
-}
+// function playGame() {
+//   let userWinCounter = 0;
+//   let compWinCounter = 0;
+//   for (let i = 0; i <= 4; i++) {
+//     userSelection = prompt("Select Rock, Paper or Scissors");
+//     computerSelection = getComputerChoice();
+//     result = playRound(userSelection, computerSelection);
+//     console.log(result);
+//     if (result.includes("You win")) {
+//       userWinCounter++;
+//     } else if (result.includes("You lose")) {
+//       compWinCounter++;
+//     }
+//   }
+//
+//   if (userWinCounter > compWinCounter) {
+//     return "You Win";
+//   } else if (userWinCounter < compWinCounter) {
+//     return "GAME OVER. Try Again";
+//   } else {
+//     return "Close One. It was a draw";
+//   }
+// }
 
 finalResult = playGame();
 console.log(finalResult);
