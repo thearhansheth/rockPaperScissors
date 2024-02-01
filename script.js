@@ -39,6 +39,9 @@ function playRound(userInputChoice, computerChoice) {
       return "You lose! Scissors beats Paper";
     }
   }
+
+  console.log(playerScore);
+  console.log(computerScore);
 }
 
 //UI Elements
@@ -49,23 +52,20 @@ const scissorsBtn = document.getElementById("Scissorsbtn");
 console.log(rockBtn, paperBtn, scissorsBtn);
 
 if (rockBtn) {
-  rockBtn.addEventListener("click", playRound("rock", getComputerChoice()));
+  rockBtn.addEventListener("click", buttonClicked("rock"));
 }
 
 if (paperBtn) {
-  paperBtn.addEventListener("click", playRound("paper", getComputerChoice()));
+  paperBtn.addEventListener("click", buttonClicked("paper"));
 }
 
 if (scissorsBtn) {
-  scissorsBtn.addEventListener(
-    "click",
-    playRound("scissors", getComputerChoice())
-  );
+  scissorsBtn.addEventListener("click", buttonClicked("scissors"));
 }
 
 //functions
 function buttonClicked(playerSelection) {
-  console.log(`Player selected ${playerSelection}`);
+  console.log("Player selected ${playerSelection}");
   computerSelection = getComputerChoice();
   playRound(playerSelection, computerSelection);
 }
