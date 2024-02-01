@@ -3,13 +3,24 @@ const rockBtn = document.getElementById("Rockbtn");
 const paperBtn = document.getElementById("Paperbtn");
 const scissorsBtn = document.getElementById("Scissorsbtn");
 
-rockBtn.addEventListener("click", playRound("rock", getComputerChoice()));
-paperBtn.addEventListener("click", playRound("paper", getComputerChoice()));
-scissorsBtn.addEventListener(
-  "click",
-  playRound("scissors", getComputerChoice())
-);
+console.log(rockBtn, paperBtn, scissorsBtn);
 
+if (rockBtn) {
+  rockBtn.addEventListener("click", playRound("rock", getComputerChoice()));
+}
+
+if (paperBtn) {
+  paperBtn.addEventListener("click", playRound("paper", getComputerChoice()));
+}
+
+if (scissorsBtn) {
+  scissorsBtn.addEventListener(
+    "click",
+    playRound("scissors", getComputerChoice())
+  );
+}
+
+//functions
 function getComputerChoice() {
   let choice = ["rock", "paper", "scissors"];
   let selectedChoice = Math.floor(Math.random() * choice.length);
@@ -72,6 +83,6 @@ function playRound(userInputChoice, computerChoice) {
 //     return "Close One. It was a draw";
 //   }
 // }
-
-finalResult = playGame();
-console.log(finalResult);
+//
+// finalResult = playGame();
+// console.log(finalResult);
