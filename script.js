@@ -52,15 +52,21 @@ const scissorsBtn = document.getElementById("Scissorsbtn");
 console.log(rockBtn, paperBtn, scissorsBtn);
 
 if (rockBtn) {
-  rockBtn.addEventListener("click", buttonClicked("rock"));
+  rockBtn.addEventListener("click", function () {
+    buttonClicked("rock");
+  });
 }
 
 if (paperBtn) {
-  paperBtn.addEventListener("click", buttonClicked("paper"));
+  paperBtn.addEventListener("click", function () {
+    buttonClicked("paper");
+  });
 }
 
 if (scissorsBtn) {
-  scissorsBtn.addEventListener("click", buttonClicked("scissors"));
+  scissorsBtn.addEventListener("click", function () {
+    buttonClicked("scissors");
+  });
 }
 
 //functions
